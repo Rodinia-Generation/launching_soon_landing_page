@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'rodinia-factory': "url('/img/rodinia_factory.jpg')",
+        'rodinia-factory': "url('https://raw.githubusercontent.com/Rodinia-Generation/launching_soon_landing_page/privpage/img/rodinia_factory.jpg?token=ABQYDSRGQBYOSE5642T3LWDA5VZMG')",
        })
     },
   },
