@@ -13,7 +13,7 @@
 
     <!-- Rodinia logo smack in the middle -->
     <div class="bg-white mt-40 m-auto w-4/12">
-      <img class="p-12 w-full object-contain" src="https://raw.githubusercontent.com/Rodinia-Generation/launching_soon_landing_page/privpage/img/logo.svg?token=ABQYDSX73QWLQGETYPCOSLTA5VYII">
+      <img class="p-12 w-full object-contain" src="https://raw.githubusercontent.com/Rodinia-Generation/launching_soon_landing_page/main/public/img/logo.svg?token=ABQYDSSOH75F6WTF5TR6CELA5VZWY">
     </div>
   </div>
   
