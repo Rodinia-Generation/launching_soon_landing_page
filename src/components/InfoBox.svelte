@@ -1,4 +1,4 @@
-<div class="w-full max-w-lg mx-auto pb-4 md:pb-0 md:pr-8">
+<div class="w-full max-w-2xl mx-auto pb-4 md:pb-0 md:pr-8">
     <h2 class="text-4xl mb-4">Empowering sustainable fashion.</h2>
     <p class="mb-3">
         Exploitation, pollution, nontransparent supply chains, and rediculous production times.
