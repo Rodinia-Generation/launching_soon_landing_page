@@ -1151,7 +1151,7 @@ var app = (function () {
     			attr_dev(img, "class", "p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12");
     			if (img.src !== (img_src_value = "img/logo.svg")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$4, 87, 8, 2864);
-    			attr_dev(p, "class", "text-gray-600");
+    			attr_dev(p, "class", "text-gray-600 select-none");
     			add_location(p, file$4, 93, 12, 3101);
     			attr_dev(div0, "class", "\n            m-auto -mt-7\n            text-xs md:text-sm text-center\n            cursor-pointer\n        ");
     			add_location(div0, file$4, 88, 8, 2970);
