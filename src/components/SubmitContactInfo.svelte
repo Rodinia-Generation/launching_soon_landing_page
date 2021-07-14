@@ -55,7 +55,6 @@
             placeholder="Corporate email"
             >
             <button
-            on:click={submitButtonClick}
             type="submit"
             class="w-full text-center py-2 rounded bg-rg-milky-blue-light text-white hover:bg-rg-milky-blue focus:outline-none my-1"
             disabled={inputInvalid}

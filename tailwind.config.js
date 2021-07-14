@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'rodinia-factory1': "url('/img/rodinia_factory1.jpg')",
-        'rodinia-factory2': "url('/img/rodinia_factory2.png')",
-        'rodinia-factory3': "url('/img/rodinia_factory3.png')",
+        'rodinia-factory1': "url('../img/rodinia_factory1.jpg')",
+        'rodinia-factory2': "url('../img/rodinia_factory2.png')",
+        'rodinia-factory3': "url('../img/rodinia_factory3.png')",
        }),
       colors: {
         'rg-barely-blue': '#DCDFDE',

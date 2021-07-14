@@ -10,6 +10,7 @@
 
     let timeLeft = computeTimeLeft();
     let showCounter = true;
+    let bgCounter = 1;
 
     setInterval(() => {
         if (showCounter)
@@ -44,7 +45,7 @@
         else {
             timeString = ""
             confetti({
-                particleCount :Math.random() * 800 + 200,
+                particleCount: Math.random() * 800 + 200,
                 angle: Math.random() * 180,
                 spread: Math.random() * 270,
                 gravity: Math.random() * 0.5 + 0.5,
@@ -72,17 +73,25 @@
             useGrouping: false
         })
     }
+
+    function bgClick() {
+        bgCounter += 1;
+        bgCounter %= 3;
+    }
 </script>
 
-<div class="w-screen h-screen bg-rodinia-factory3 bg-cover bg-center bg-fixed">
+<div
+    class={`w-screen h-screen bg-cover bg-center bg-fixed bg-rodinia-factory${bgCounter+1}`}
+    on:click={bgClick}
+>
     <div class="flex flex-col"> <!--  "> -->
-        <img class="p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12" src="/img/logo.svg">
+        <img class="p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12" src="img/logo.svg">
         <div class="
             m-auto -mt-7
             text-xs md:text-sm text-center
             cursor-pointer
         ">
-            <p on:click={handleClick} class="text-gray-600">{timeLeft}</p>
+            <p on:click={handleClick} class="text-gray-600 select-none">{timeLeft}</p>
         </div>
     </div>
 </div>
