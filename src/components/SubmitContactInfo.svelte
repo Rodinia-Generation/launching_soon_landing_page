@@ -1,55 +1,22 @@
 <script>
 
-    let fullname, email;
-
-    function saveContact(fullname, email) {
-        console.log(fullname, email)
-    }
-  
-    function submitButtonClick() {
-        if (fullname && email) {
+    let fullname, companyAndTitle, email;
+    let inputInvalid;
+    
+    $: {
+        if (fullname && companyAndTitle && email) {
             let emailValid = validateEmail(email);
-            let nameValid = validateFullName(fullname);
-            if (emailValid && nameValid) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'We will keep you posted!',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                saveContact(fullname, email);
-                fullname = undefined;
-                email = undefined;
-            } else if (emailValid && !nameValid) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Please state your full name.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                fullname = undefined;
-            } else if (!emailValid && nameValid) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Please enter a valid email address.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                email = undefined;
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'State your full name and provide a valid email address.',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-                fullname = undefined;
-                email = undefined;
-            }
-        }
+            let companyAndTitleValid = validateName(companyAndTitle);
+            let nameValid = validateName(fullname);
+            if (emailValid && companyAndTitleValid && nameValid)
+                inputInvalid = false;
+            else
+                inputInvalid = true;
+        } else
+            inputInvalid = true;
     }
 
-    function validateFullName(name) {
+    function validateName(name) {
         return name.split(" ").length > 1;
     }
     function validateEmail(email) {
@@ -64,26 +31,34 @@
     flex-grow justify-center flex flex-col
 ">
     <form action="https://formspree.io/f/xzbyadvb" method="POST">
-        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-            <h1 class="mb-8 text-2xl text-center">Want updates?</h1>
+        <div class="bg-white px-8 py-8 rounded shadow-md text-black w-full">
+            <h1 class="mb-8 text-2xl text-center">Be the first to know</h1>
             <input
             bind:value={fullname}
             type="text"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
+            class="block border border-grey-light w-full p-2 rounded mb-2"
             name="fullname"
             placeholder="Name"
             >
             <input
+            bind:value={companyAndTitle}
+            type="text"
+            class="block border border-grey-light w-full p-2 rounded mb-2"
+            name="companyAndTitle"
+            placeholder="Company and title"
+            >
+            <input
             bind:value={email}
             type="text"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
+            class="block border border-grey-light w-full p-2 rounded mb-2"
             name="email"
             placeholder="Corporate email"
             >
             <button
             on:click={submitButtonClick}
             type="submit"
-            class="w-full text-center py-3 rounded bg-red-400 text-white hover:bg-red-500 focus:outline-none my-1"
+            class="w-full text-center py-2 rounded bg-rg-milky-blue-light text-white hover:bg-rg-milky-blue focus:outline-none my-1"
+            disabled={inputInvalid}
             >Submit</button>
         </div>
     </form>

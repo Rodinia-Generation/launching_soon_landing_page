@@ -74,15 +74,15 @@
     }
 </script>
 
-<div class="w-screen h-screen bg-rodinia-factory bg-cover bg-center bg-fixed">
+<div class="w-screen h-screen bg-rodinia-factory3 bg-cover bg-center bg-fixed">
     <div class="flex flex-col"> <!--  "> -->
-        <img class="p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12" src="https://raw.githubusercontent.com/Rodinia-Generation/launching_soon_landing_page/main/public/img/logo.svg?token=ABQYDSSOH75F6WTF5TR6CELA5VZWY">
+        <img class="p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12" src="/img/logo.svg">
         <div class="
             m-auto -mt-7
             text-xs md:text-sm text-center
             cursor-pointer
         ">
-            <p on:click={handleClick} class="text-gray-400">{timeLeft}</p>
+            <p on:click={handleClick} class="text-gray-600">{timeLeft}</p>
         </div>
     </div>
 </div>
