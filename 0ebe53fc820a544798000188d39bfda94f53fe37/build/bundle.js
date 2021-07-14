@@ -1148,12 +1148,12 @@ var app = (function () {
     			p = element("p");
     			t1 = text(/*timeLeft*/ ctx[0]);
     			attr_dev(img, "class", "p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12");
-    			if (img.src !== (img_src_value = "/img/logo.svg")) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = "img/logo.svg")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$4, 78, 8, 2718);
     			attr_dev(p, "class", "text-gray-600");
-    			add_location(p, file$4, 84, 12, 2956);
+    			add_location(p, file$4, 84, 12, 2955);
     			attr_dev(div0, "class", "\n            m-auto -mt-7\n            text-xs md:text-sm text-center\n            cursor-pointer\n        ");
-    			add_location(div0, file$4, 79, 8, 2825);
+    			add_location(div0, file$4, 79, 8, 2824);
     			attr_dev(div1, "class", "flex flex-col");
     			add_location(div1, file$4, 77, 4, 2669);
     			attr_dev(div2, "class", "w-screen h-screen bg-rodinia-factory3 bg-cover bg-center bg-fixed");
@@ -1410,8 +1410,7 @@ var app = (function () {
     				dispose = [
     					listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
     					listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
-    					listen_dev(button, "click", submitButtonClick, false, false, false)
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[6])
     				];
 
     				mounted = true;
@@ -1695,7 +1694,7 @@ var app = (function () {
     			add_location(p0, file$1, 2, 4, 71);
     			attr_dev(p1, "class", "my-auto");
     			add_location(p1, file$1, 3, 4, 125);
-    			if (img.src !== (img_src_value = "https://raw.githubusercontent.com/Rodinia-Generation/launching_soon_landing_page/main/public/img/linkedin.svg?token=ABQYDSX3UFT4UJSFJH2OZ7TA5XJIC")) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = "img/linkedin.svg")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$1, 5, 8, 296);
     			attr_dev(a, "class", "rounded-full p-3 hover:bg-red-50 my-auto");
     			attr_dev(a, "href", "https://www.linkedin.com/company/rodinia-generation");
