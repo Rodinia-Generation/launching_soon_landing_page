@@ -1135,6 +1135,7 @@ var app = (function () {
     	let div0;
     	let p;
     	let t1;
+    	let div2_class_value;
     	let mounted;
     	let dispose;
 
@@ -1149,15 +1150,15 @@ var app = (function () {
     			t1 = text(/*timeLeft*/ ctx[0]);
     			attr_dev(img, "class", "p-12 bg-white mt-40 m-auto w-10/12 sm:w-5/12 lg:w-4/12 xl:w-3/12");
     			if (img.src !== (img_src_value = "img/logo.svg")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$4, 78, 8, 2718);
+    			add_location(img, file$4, 87, 8, 2864);
     			attr_dev(p, "class", "text-gray-600");
-    			add_location(p, file$4, 84, 12, 2955);
+    			add_location(p, file$4, 93, 12, 3101);
     			attr_dev(div0, "class", "\n            m-auto -mt-7\n            text-xs md:text-sm text-center\n            cursor-pointer\n        ");
-    			add_location(div0, file$4, 79, 8, 2824);
+    			add_location(div0, file$4, 88, 8, 2970);
     			attr_dev(div1, "class", "flex flex-col");
-    			add_location(div1, file$4, 77, 4, 2669);
-    			attr_dev(div2, "class", "w-screen h-screen bg-rodinia-factory3 bg-cover bg-center bg-fixed");
-    			add_location(div2, file$4, 76, 0, 2585);
+    			add_location(div1, file$4, 86, 4, 2815);
+    			attr_dev(div2, "class", div2_class_value = `w-screen h-screen bg-cover bg-center bg-fixed bg-rodinia-factory${/*bgCounter*/ ctx[1] + 1}`);
+    			add_location(div2, file$4, 82, 0, 2688);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1172,19 +1173,27 @@ var app = (function () {
     			append_dev(p, t1);
 
     			if (!mounted) {
-    				dispose = listen_dev(p, "click", /*handleClick*/ ctx[1], false, false, false);
+    				dispose = [
+    					listen_dev(p, "click", /*handleClick*/ ctx[2], false, false, false),
+    					listen_dev(div2, "click", /*bgClick*/ ctx[3], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*timeLeft*/ 1) set_data_dev(t1, /*timeLeft*/ ctx[0]);
+
+    			if (dirty & /*bgCounter*/ 2 && div2_class_value !== (div2_class_value = `w-screen h-screen bg-cover bg-center bg-fixed bg-rodinia-factory${/*bgCounter*/ ctx[1] + 1}`)) {
+    				attr_dev(div2, "class", div2_class_value);
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -1229,6 +1238,7 @@ var app = (function () {
     	const launchDateTS = launchDate.getTime();
     	let timeLeft = computeTimeLeft();
     	let showCounter = true;
+    	let bgCounter = 1;
 
     	setInterval(
     		() => {
@@ -1275,6 +1285,11 @@ var app = (function () {
     		if (showCounter) $$invalidate(0, timeLeft = computeTimeLeft()); else $$invalidate(0, timeLeft = "Launching on " + monthNames[launchDate.getMonth()] + " " + launchDate.getDate() + ", " + launchDate.getFullYear());
     	}
 
+    	function bgClick() {
+    		$$invalidate(1, bgCounter += 1);
+    		$$invalidate(1, bgCounter %= 3);
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -1288,21 +1303,24 @@ var app = (function () {
     		launchDateTS,
     		timeLeft,
     		showCounter,
+    		bgCounter,
     		computeTimeLeft,
     		handleClick,
-    		doubleDigits
+    		doubleDigits,
+    		bgClick
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("timeLeft" in $$props) $$invalidate(0, timeLeft = $$props.timeLeft);
     		if ("showCounter" in $$props) showCounter = $$props.showCounter;
+    		if ("bgCounter" in $$props) $$invalidate(1, bgCounter = $$props.bgCounter);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [timeLeft, handleClick];
+    	return [timeLeft, bgCounter, handleClick, bgClick];
     }
 
     class LandingImage extends SvelteComponentDev {
