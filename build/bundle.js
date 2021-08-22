@@ -562,7 +562,7 @@ var app = (function () {
     		c: function create() {
     			video = element("video");
     			source = element("source");
-    			if (source.src !== (source_src_value = "/img/billowing.mp4")) attr_dev(source, "src", source_src_value);
+    			if (source.src !== (source_src_value = "./img/billowing.mp4")) attr_dev(source, "src", source_src_value);
     			attr_dev(source, "type", "video/mp4");
     			add_location(source, file$7, 1, 4, 93);
     			video.autoplay = true;
@@ -654,20 +654,20 @@ var app = (function () {
     			a2 = element("a");
     			img2 = element("img");
     			attr_dev(img0, "class", "p-4");
-    			if (img0.src !== (img0_src_value = "/img/thumbnail_linkedin.png")) attr_dev(img0, "src", img0_src_value);
+    			if (img0.src !== (img0_src_value = "./img/thumbnail_linkedin.png")) attr_dev(img0, "src", img0_src_value);
     			add_location(img0, file$6, 1, 67, 124);
     			attr_dev(a0, "href", "https://www.linkedin.com/company/rodinia-generation/");
     			add_location(a0, file$6, 1, 4, 61);
     			attr_dev(img1, "class", "p-4");
-    			if (img1.src !== (img1_src_value = "/img/thumbnail_email.svg")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file$6, 2, 45, 225);
+    			if (img1.src !== (img1_src_value = "./img/thumbnail_email.svg")) attr_dev(img1, "src", img1_src_value);
+    			add_location(img1, file$6, 2, 45, 226);
     			attr_dev(a1, "href", "mailto:we@rodiniageneration.io");
-    			add_location(a1, file$6, 2, 4, 184);
+    			add_location(a1, file$6, 2, 4, 185);
     			attr_dev(img2, "class", "p-4");
-    			if (img2.src !== (img2_src_value = "/img/thumbnail_instagram.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file$6, 3, 58, 336);
+    			if (img2.src !== (img2_src_value = "./img/thumbnail_instagram.png")) attr_dev(img2, "src", img2_src_value);
+    			add_location(img2, file$6, 3, 58, 338);
     			attr_dev(a2, "href", "https://www.instagram.com/rodiniageneration");
-    			add_location(a2, file$6, 3, 4, 282);
+    			add_location(a2, file$6, 3, 4, 284);
     			attr_dev(div, "class", "flex flex-col justify-end h-full w-20 py-8");
     			add_location(div, file$6, 0, 0, 0);
     		},
