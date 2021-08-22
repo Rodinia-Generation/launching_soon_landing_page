@@ -1788,7 +1788,7 @@ var app = (function () {
     			attr_dev(div4, "class", "flex flex-col w-6/12 h-full");
     			add_location(div4, file$3, 14, 8, 452);
     			attr_dev(img, "class", "mx-auto w-3/6");
-    			if (img.src !== (img_src_value = "/img/logo.svg")) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = "./img/logo.svg")) attr_dev(img, "src", img_src_value);
     			add_location(img, file$3, 42, 16, 1583);
     			attr_dev(div5, "class", "flex flex-col justify-end w-full h-3/6 p-16");
     			add_location(div5, file$3, 41, 12, 1509);
