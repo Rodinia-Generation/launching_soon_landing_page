@@ -1975,7 +1975,7 @@ var app = (function () {
     			t6 = text(" products.");
     			t7 = space();
     			p3 = element("p");
-    			p3.textContent = "Be there when we unlock how responsible production technology enables a healthy planet and a healthy business without compromising the other.";
+    			p3.textContent = "Be there when we reveal how cutting-edge technology and software enables a new and better way to make textile products. A way that is both sustainable and profitable.";
     			t9 = space();
     			create_component(getupdatesbutton.$$.fragment);
     			t10 = space();
@@ -2006,11 +2006,11 @@ var app = (function () {
     			add_location(div4, file$3, 47, 4, 833);
     			attr_dev(img, "class", "mx-auto w-3/6");
     			if (img.src !== (img_src_value = "./img/logo.svg")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$3, 75, 12, 2038);
+    			add_location(img, file$3, 75, 12, 2063);
     			attr_dev(div5, "class", "flex flex-col justify-end w-full h-max lg:h-3/6 p-16");
-    			add_location(div5, file$3, 74, 8, 1959);
+    			add_location(div5, file$3, 74, 8, 1984);
     			attr_dev(div6, "class", "flex flex-col w-full lg:w-6/12 h-max lg:h-full mt-8 md:mt-16 lg:mt-0");
-    			add_location(div6, file$3, 70, 4, 1823);
+    			add_location(div6, file$3, 70, 4, 1848);
     			attr_dev(div7, "class", "flex flex-col lg:flex-row w-full h-full");
     			add_location(div7, file$3, 44, 0, 733);
     		},
