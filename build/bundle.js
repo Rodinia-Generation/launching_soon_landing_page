@@ -1816,11 +1816,11 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			button = element("button");
-    			button.textContent = "Keep me updated";
-    			attr_dev(button, "class", "\n        bg-transparent text-white font-semibold hover:text-gray-300\n        variable-font-size variable-padding\n        border border-white hover:border-gray-300 rounded\n     svelte-169dpqf");
-    			add_location(button, file$4, 37, 4, 648);
-    			attr_dev(div, "class", "mx-auto");
-    			add_location(div, file$4, 36, 0, 599);
+    			button.textContent = "Be the first to know";
+    			attr_dev(button, "class", "\n        bg-transparent text-white font-semibold hover:text-gray-300\n        py-2 px-4\n        border border-white hover:border-gray-300 rounded\n    ");
+    			add_location(button, file$4, 11, 4, 225);
+    			attr_dev(div, "class", "mx-auto mt-16 sm:mt-24 lg:mt-12");
+    			add_location(div, file$4, 10, 0, 152);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1920,15 +1920,14 @@ var app = (function () {
     const file$3 = "src/components/InnerContent.svelte";
 
     function create_fragment$3(ctx) {
-    	let div7;
-    	let div4;
+    	let div6;
+    	let div3;
     	let div1;
     	let div0;
     	let p0;
     	let t1;
     	let p1;
     	let t3;
-    	let div3;
     	let div2;
     	let p2;
     	let t4;
@@ -1939,10 +1938,10 @@ var app = (function () {
     	let t9;
     	let getupdatesbutton;
     	let t10;
-    	let div6;
+    	let div5;
     	let countdown;
     	let t11;
-    	let div5;
+    	let div4;
     	let img;
     	let img_src_value;
     	let current;
@@ -1956,8 +1955,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div7 = element("div");
-    			div4 = element("div");
+    			div6 = element("div");
+    			div3 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			p0 = element("p");
@@ -1966,7 +1965,6 @@ var app = (function () {
     			p1 = element("p");
     			p1.textContent = "7th";
     			t3 = space();
-    			div3 = element("div");
     			div2 = element("div");
     			p2 = element("p");
     			t4 = text("We are creating a better way to make ");
@@ -1975,58 +1973,55 @@ var app = (function () {
     			t6 = text(" products.");
     			t7 = space();
     			p3 = element("p");
-    			p3.textContent = "Be there when we reveal how cutting-edge technology and software enables a new and better way to make textile products. A way that is both sustainable and profitable.";
+    			p3.textContent = "Be there when we reveal how cutting-edge technology enables a healthy planet and a healthy business without compromising the other.";
     			t9 = space();
     			create_component(getupdatesbutton.$$.fragment);
     			t10 = space();
-    			div6 = element("div");
+    			div5 = element("div");
     			create_component(countdown.$$.fragment);
     			t11 = space();
-    			div5 = element("div");
+    			div4 = element("div");
     			img = element("img");
-    			attr_dev(p0, "class", "pl-2 variable-font-size-2 svelte-bgy0tn");
-    			add_location(p0, file$3, 53, 16, 1054);
-    			attr_dev(p1, "class", "variable-font-size-25 svelte-bgy0tn");
+    			attr_dev(p0, "class", "pl-2 variable-font-size-title svelte-10l2s2e");
+    			add_location(p0, file$3, 37, 16, 812);
+    			attr_dev(p1, "class", "variable-font-size-date svelte-10l2s2e");
     			set_style(p1, "line-height", "0.8");
-    			add_location(p1, file$3, 54, 16, 1124);
+    			add_location(p1, file$3, 38, 16, 886);
     			attr_dev(div0, "class", "m-auto");
-    			add_location(div0, file$3, 52, 12, 1017);
-    			attr_dev(div1, "class", "flex w-full h-max lg:h-3/6 order-1");
-    			add_location(div1, file$3, 50, 8, 930);
-    			add_location(b, file$3, 62, 90, 1465);
-    			attr_dev(p2, "class", "variable-font-size-2 mb-6 svelte-bgy0tn");
-    			add_location(p2, file$3, 62, 16, 1391);
-    			attr_dev(p3, "class", "variable-font-size-1_5 mb-6 svelte-bgy0tn");
-    			add_location(p3, file$3, 63, 16, 1522);
-    			attr_dev(div2, "class", "mb-6");
-    			add_location(div2, file$3, 61, 12, 1356);
-    			attr_dev(div3, "class", "w-full h-max lg:h-3/6 p-8 xs:p-16 order-2");
-    			add_location(div3, file$3, 59, 8, 1262);
-    			attr_dev(div4, "class", "flex flex-col w-full lg:w-6/12 h-max lg:h-full");
-    			add_location(div4, file$3, 47, 4, 833);
-    			attr_dev(img, "class", "mx-auto w-3/6");
+    			add_location(div0, file$3, 36, 12, 775);
+    			attr_dev(div1, "class", "flex w-full h-1/2");
+    			add_location(div1, file$3, 34, 8, 705);
+    			add_location(b, file$3, 49, 97, 1291);
+    			attr_dev(p2, "class", "text-xl sm:text-2xl md:text-3xl mb-6");
+    			add_location(p2, file$3, 49, 12, 1206);
+    			attr_dev(p3, "class", "text-md sm:text-lg md:text-xl");
+    			add_location(p3, file$3, 50, 12, 1344);
+    			attr_dev(div2, "class", "flex flex-col lg:justify-center w-full\n        flex-grow lg:h-3/6\n        px-8 sm:px-16\n        mt-16 sm:mt-24 lg:mt-0\n        ");
+    			add_location(div2, file$3, 43, 8, 1026);
+    			attr_dev(div3, "class", "flex flex-col w-full lg:w-6/12 lg:h-full");
+    			add_location(div3, file$3, 31, 4, 614);
+    			attr_dev(img, "class", "mx-auto mt-16 sm:mt-24 lg:mt-0 w-5/6 xs:w-4/6 sm:w-3/6");
     			if (img.src !== (img_src_value = "./img/logo.svg")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$3, 75, 12, 2063);
-    			attr_dev(div5, "class", "flex flex-col justify-end w-full h-max lg:h-3/6 p-16");
-    			add_location(div5, file$3, 74, 8, 1984);
-    			attr_dev(div6, "class", "flex flex-col w-full lg:w-6/12 h-max lg:h-full mt-8 md:mt-16 lg:mt-0");
-    			add_location(div6, file$3, 70, 4, 1848);
-    			attr_dev(div7, "class", "flex flex-col lg:flex-row w-full h-full");
-    			add_location(div7, file$3, 44, 0, 733);
+    			add_location(img, file$3, 61, 12, 1829);
+    			attr_dev(div4, "class", "flex flex-col justify-end w-full lg:h-3/6 px-16 pb-16");
+    			add_location(div4, file$3, 60, 8, 1749);
+    			attr_dev(div5, "class", "flex flex-col w-full lg:w-6/12 lg:h-full mt-16 sm:mt-24 lg:mt-0");
+    			add_location(div5, file$3, 56, 4, 1618);
+    			attr_dev(div6, "class", "flex flex-col lg:flex-row w-full h-full min-h-full");
+    			add_location(div6, file$3, 28, 0, 503);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, div4);
-    			append_dev(div4, div1);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div3);
+    			append_dev(div3, div1);
     			append_dev(div1, div0);
     			append_dev(div0, p0);
     			append_dev(div0, t1);
     			append_dev(div0, p1);
-    			append_dev(div4, t3);
-    			append_dev(div4, div3);
+    			append_dev(div3, t3);
     			append_dev(div3, div2);
     			append_dev(div2, p2);
     			append_dev(p2, t4);
@@ -2034,14 +2029,14 @@ var app = (function () {
     			append_dev(p2, t6);
     			append_dev(div2, t7);
     			append_dev(div2, p3);
-    			append_dev(div3, t9);
-    			mount_component(getupdatesbutton, div3, null);
-    			append_dev(div7, t10);
-    			append_dev(div7, div6);
-    			mount_component(countdown, div6, null);
-    			append_dev(div6, t11);
+    			append_dev(div2, t9);
+    			mount_component(getupdatesbutton, div2, null);
+    			append_dev(div6, t10);
     			append_dev(div6, div5);
-    			append_dev(div5, img);
+    			mount_component(countdown, div5, null);
+    			append_dev(div5, t11);
+    			append_dev(div5, div4);
+    			append_dev(div4, img);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -2061,7 +2056,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div7);
+    			if (detaching) detach_dev(div6);
     			destroy_component(getupdatesbutton);
     			destroy_component(countdown);
     		}
