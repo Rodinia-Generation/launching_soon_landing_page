@@ -1818,8 +1818,8 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Be the first to know";
     			attr_dev(button, "class", "\n        bg-transparent text-white font-semibold hover:text-gray-300\n        py-2 px-4\n        border border-white hover:border-gray-300 rounded\n    ");
-    			add_location(button, file$4, 11, 4, 225);
-    			attr_dev(div, "class", "mx-auto mt-16 sm:mt-24 lg:mt-12");
+    			add_location(button, file$4, 11, 4, 243);
+    			attr_dev(div, "class", "mx-auto lg:mx-0 lg:left-0 mt-16 sm:mt-24 lg:mt-12");
     			add_location(div, file$4, 10, 0, 152);
     		},
     		l: function claim(nodes) {
