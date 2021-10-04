@@ -154,9 +154,6 @@ var app = (function () {
     function space() {
         return text(' ');
     }
-    function empty() {
-        return text('');
-    }
     function listen(node, event, handler, options) {
         node.addEventListener(event, handler, options);
         return () => node.removeEventListener(event, handler, options);
@@ -556,39 +553,7 @@ var app = (function () {
 
     const file$7 = "src/components/BackgroundVideo.svelte";
 
-    // (10:0) {:else}
-    function create_else_block(ctx) {
-    	let img;
-    	let img_src_value;
-
-    	const block = {
-    		c: function create() {
-    			img = element("img");
-    			attr_dev(img, "class", "fixed h-screen w-screen object-cover");
-    			if (img.src !== (img_src_value = "./img/billowing.png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$7, 10, 4, 235);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, img, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(img);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_else_block.name,
-    		type: "else",
-    		source: "(10:0) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (1:0) {#if innerWidth >= 480}
-    function create_if_block$1(ctx) {
+    function create_fragment$7(ctx) {
     	let video;
     	let source;
     	let source_src_value;
@@ -599,62 +564,25 @@ var app = (function () {
     			source = element("source");
     			if (source.src !== (source_src_value = "./img/loop_content.mp4")) attr_dev(source, "src", source_src_value);
     			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$7, 7, 8, 153);
+    			add_location(source, file$7, 1, 4, 84);
     			video.autoplay = true;
     			video.loop = true;
     			attr_dev(video, "id", "myVideo");
     			attr_dev(video, "class", "fixed h-screen w-screen object-cover");
-    			add_location(video, file$7, 1, 4, 28);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, video, anchor);
-    			append_dev(video, source);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(video);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$1.name,
-    		type: "if",
-    		source: "(1:0) {#if innerWidth >= 480}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$7(ctx) {
-    	let if_block_anchor;
-
-    	function select_block_type(ctx, dirty) {
-    		if (innerWidth >= 480) return create_if_block$1;
-    		return create_else_block;
-    	}
-
-    	let current_block_type = select_block_type();
-    	let if_block = current_block_type(ctx);
-
-    	const block = {
-    		c: function create() {
-    			if_block.c();
-    			if_block_anchor = empty();
+    			add_location(video, file$7, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			if_block.m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
+    			insert_dev(target, video, anchor);
+    			append_dev(video, source);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if_block.d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
+    			if (detaching) detach_dev(video);
     		}
     	};
 
@@ -1569,7 +1497,7 @@ var app = (function () {
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Countdown", slots, []);
-    	const launchDate = new Date("Oct 11, 2021 12:00:00");
+    	const launchDate = new Date("Oct 13, 2021 12:00:00");
     	const launchDateTS = launchDate.getTime();
     	let days, hours, minutes, seconds;
     	[days, hours, minutes, seconds] = computeTimeLeft();
@@ -1828,7 +1756,7 @@ var app = (function () {
     			p0.textContent = "October 2021";
     			t1 = space();
     			p1 = element("p");
-    			p1.textContent = "11th";
+    			p1.textContent = "13th";
     			t3 = space();
     			div2 = element("div");
     			p2 = element("p");
@@ -1847,9 +1775,9 @@ var app = (function () {
     			t11 = space();
     			div4 = element("div");
     			img = element("img");
-    			attr_dev(p0, "class", "pl-2 variable-font-size-title svelte-1pwxoox");
+    			attr_dev(p0, "class", "pl-2 variable-font-size-title svelte-16xee2");
     			add_location(p0, file$3, 15, 16, 500);
-    			attr_dev(p1, "class", "variable-font-size-date svelte-1pwxoox");
+    			attr_dev(p1, "class", "variable-font-size-date svelte-16xee2");
     			set_style(p1, "line-height", "0.8");
     			add_location(p1, file$3, 16, 16, 574);
     			attr_dev(div0, "class", "m-auto");
