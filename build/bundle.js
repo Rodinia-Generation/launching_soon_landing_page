@@ -556,8 +556,8 @@ var app = (function () {
 
     const file$7 = "src/components/BackgroundVideo.svelte";
 
-    // (13:0) {:else}
-    function create_else_block_1(ctx) {
+    // (10:0) {:else}
+    function create_else_block(ctx) {
     	let img;
     	let img_src_value;
 
@@ -566,12 +566,11 @@ var app = (function () {
     			img = element("img");
     			attr_dev(img, "class", "fixed h-screen w-screen object-cover");
     			if (img.src !== (img_src_value = "./img/billowing.png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$7, 13, 4, 542);
+    			add_location(img, file$7, 10, 4, 235);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
     		},
-    		p: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(img);
     		}
@@ -579,9 +578,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block_1.name,
+    		id: create_else_block.name,
     		type: "else",
-    		source: "(13:0) {:else}",
+    		source: "(10:0) {:else}",
     		ctx
     	});
 
@@ -591,23 +590,17 @@ var app = (function () {
     // (1:0) {#if innerWidth >= 480}
     function create_if_block$1(ctx) {
     	let video;
-
-    	function select_block_type_1(ctx, dirty) {
-    		if (innerWidth > 1080) return create_if_block_1;
-    		if (innerWidth > 720) return create_if_block_2;
-    		if (innerWidth > 540) return create_if_block_3;
-    		return create_else_block;
-    	}
-
-    	let current_block_type = select_block_type_1();
-    	let if_block = current_block_type(ctx);
+    	let source;
+    	let source_src_value;
 
     	const block = {
     		c: function create() {
     			video = element("video");
-    			if_block.c();
+    			source = element("source");
+    			if (source.src !== (source_src_value = "./img/loop_content.mp4")) attr_dev(source, "src", source_src_value);
+    			attr_dev(source, "type", "video/mp4");
+    			add_location(source, file$7, 7, 8, 153);
     			video.autoplay = true;
-    			video.muted = true;
     			video.loop = true;
     			attr_dev(video, "id", "myVideo");
     			attr_dev(video, "class", "fixed h-screen w-screen object-cover");
@@ -615,12 +608,10 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, video, anchor);
-    			if_block.m(video, null);
+    			append_dev(video, source);
     		},
-    		p: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(video);
-    			if_block.d();
     		}
     	};
 
@@ -635,136 +626,12 @@ var app = (function () {
     	return block;
     }
 
-    // (9:8) {:else}
-    function create_else_block(ctx) {
-    	let source;
-    	let source_src_value;
-
-    	const block = {
-    		c: function create() {
-    			source = element("source");
-    			if (source.src !== (source_src_value = "./img/billowing480.mp4")) attr_dev(source, "src", source_src_value);
-    			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$7, 9, 12, 448);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, source, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(source);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_else_block.name,
-    		type: "else",
-    		source: "(9:8) {:else}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (7:35) 
-    function create_if_block_3(ctx) {
-    	let source;
-    	let source_src_value;
-
-    	const block = {
-    		c: function create() {
-    			source = element("source");
-    			if (source.src !== (source_src_value = "./img/billowing540.mp4")) attr_dev(source, "src", source_src_value);
-    			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$7, 7, 12, 365);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, source, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(source);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_3.name,
-    		type: "if",
-    		source: "(7:35) ",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (5:35) 
-    function create_if_block_2(ctx) {
-    	let source;
-    	let source_src_value;
-
-    	const block = {
-    		c: function create() {
-    			source = element("source");
-    			if (source.src !== (source_src_value = "./img/billowing720.mp4")) attr_dev(source, "src", source_src_value);
-    			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$7, 5, 12, 262);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, source, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(source);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_2.name,
-    		type: "if",
-    		source: "(5:35) ",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (3:8) {#if innerWidth > 1080}
-    function create_if_block_1(ctx) {
-    	let source;
-    	let source_src_value;
-
-    	const block = {
-    		c: function create() {
-    			source = element("source");
-    			if (source.src !== (source_src_value = "./img/billowing1080.mp4")) attr_dev(source, "src", source_src_value);
-    			attr_dev(source, "type", "video/mp4");
-    			add_location(source, file$7, 3, 12, 158);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, source, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(source);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_1.name,
-    		type: "if",
-    		source: "(3:8) {#if innerWidth > 1080}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
     function create_fragment$7(ctx) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
     		if (innerWidth >= 480) return create_if_block$1;
-    		return create_else_block_1;
+    		return create_else_block;
     	}
 
     	let current_block_type = select_block_type();
@@ -782,9 +649,7 @@ var app = (function () {
     			if_block.m(target, anchor);
     			insert_dev(target, if_block_anchor, anchor);
     		},
-    		p: function update(ctx, [dirty]) {
-    			if_block.p(ctx, dirty);
-    		},
+    		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
@@ -1609,38 +1474,38 @@ var app = (function () {
     			t16 = space();
     			p8 = element("p");
     			p8.textContent = "Seconds";
-    			add_location(b, file$5, 95, 11, 2286);
-    			add_location(p0, file$5, 95, 8, 2283);
+    			add_location(b, file$5, 59, 11, 1796);
+    			add_location(p0, file$5, 59, 8, 1793);
     			attr_dev(div0, "class", "mx-auto variable-font-size-header svelte-n3irku");
-    			add_location(div0, file$5, 94, 4, 2227);
+    			add_location(div0, file$5, 58, 4, 1737);
     			attr_dev(p1, "class", "p-3 xs:p-5 font-thin m-auto");
-    			add_location(p1, file$5, 99, 12, 2478);
+    			add_location(p1, file$5, 63, 12, 1988);
     			attr_dev(p2, "class", "m-auto variable-font-size-1_5 svelte-n3irku");
-    			add_location(p2, file$5, 100, 12, 2540);
+    			add_location(p2, file$5, 64, 12, 2050);
     			attr_dev(div1, "class", "flex flex-col w-3/12");
-    			add_location(div1, file$5, 98, 8, 2431);
+    			add_location(div1, file$5, 62, 8, 1941);
     			attr_dev(p3, "class", "p-3 xs:p-5 font-thin m-auto");
-    			add_location(p3, file$5, 103, 12, 2660);
+    			add_location(p3, file$5, 67, 12, 2170);
     			attr_dev(p4, "class", "m-auto variable-font-size-1_5 svelte-n3irku");
-    			add_location(p4, file$5, 104, 12, 2723);
+    			add_location(p4, file$5, 68, 12, 2233);
     			attr_dev(div2, "class", "flex flex-col w-3/12");
-    			add_location(div2, file$5, 102, 8, 2613);
+    			add_location(div2, file$5, 66, 8, 2123);
     			attr_dev(p5, "class", "p-3 xs:p-5 font-thin m-auto");
-    			add_location(p5, file$5, 107, 12, 2844);
+    			add_location(p5, file$5, 71, 12, 2354);
     			attr_dev(p6, "class", "m-auto variable-font-size-1_5 svelte-n3irku");
-    			add_location(p6, file$5, 108, 12, 2909);
+    			add_location(p6, file$5, 72, 12, 2419);
     			attr_dev(div3, "class", "flex flex-col w-3/12");
-    			add_location(div3, file$5, 106, 8, 2797);
+    			add_location(div3, file$5, 70, 8, 2307);
     			attr_dev(p7, "class", "p-3 xs:p-5 font-thin m-auto");
-    			add_location(p7, file$5, 111, 12, 3032);
+    			add_location(p7, file$5, 75, 12, 2542);
     			attr_dev(p8, "class", "m-auto variable-font-size-1_5 svelte-n3irku");
-    			add_location(p8, file$5, 112, 12, 3097);
+    			add_location(p8, file$5, 76, 12, 2607);
     			attr_dev(div4, "class", "flex flex-col w-3/12");
-    			add_location(div4, file$5, 110, 8, 2985);
+    			add_location(div4, file$5, 74, 8, 2495);
     			attr_dev(div5, "class", "flex flex-row w-5/6 mx-auto variable-font-size-5 svelte-n3irku");
-    			add_location(div5, file$5, 97, 4, 2360);
+    			add_location(div5, file$5, 61, 4, 1870);
     			attr_dev(div6, "class", "flex flex-col justify-center w-full h-3/6 select-none");
-    			add_location(div6, file$5, 93, 0, 2155);
+    			add_location(div6, file$5, 57, 0, 1665);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1704,7 +1569,7 @@ var app = (function () {
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Countdown", slots, []);
-    	const launchDate = new Date("Oct 7, 2021 12:00:00");
+    	const launchDate = new Date("Oct 11, 2021 12:00:00");
     	const launchDateTS = launchDate.getTime();
     	let days, hours, minutes, seconds;
     	[days, hours, minutes, seconds] = computeTimeLeft();
