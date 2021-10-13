@@ -1497,7 +1497,7 @@ var app = (function () {
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("Countdown", slots, []);
-    	const launchDate = new Date("Oct 13, 2021 12:00:00");
+    	const launchDate = new Date("Oct 14, 2021 12:00:00");
     	const launchDateTS = launchDate.getTime();
     	let days, hours, minutes, seconds;
     	[days, hours, minutes, seconds] = computeTimeLeft();
